@@ -7,7 +7,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://172.20.85.37:8080/realms/saas-realm/protocol/openid-connect/certs
+          jwk-set-uri: http://host.docker.internal:8080/realms/saas-realm/protocol/openid-connect/certs
 
 eureka:
   instance:
@@ -16,7 +16,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://172.20.85.37:8761/eureka/
+      defaultZone: http://host.docker.internal:8761/eureka/
 
 management:
   endpoints:
@@ -27,9 +27,9 @@ management:
     health:
       show-details: always
 
-172.20.85.37:
-  server-url: http://172.20.85.37:8080
+host.docker.internal:
+  server-url: http://host.docker.internal:8080
   realm: saas-realm
   client-id: saas-client
   client-secret: eXuwLPfp0HT7sEfd4A9tl4epEIXhUMNb
-  openIdConnectUrl: http://172.20.85.37:8080/realms/saas-realm/.well-known/openid-configuration
+  openIdConnectUrl: http://host.docker.internal:8080/realms/saas-realm/.well-known/openid-configuration
