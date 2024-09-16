@@ -32,4 +32,4 @@ management:
   realm: saas-realm
   client-id: saas-client
   client-secret: eXuwLPfp0HT7sEfd4A9tl4epEIXhUMNb
-  openIdConnectUrl: http://host.docker.internal:8080/realms/saas-realm/.well-known/openid-configuration
+  openIdConnectUrl: http://172.20.85.37:8080/realms/saas-realm/.well-known/openid-configuration
